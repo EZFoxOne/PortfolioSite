@@ -1,0 +1,16 @@
+# robots.txt for Cole Carey Portfolio
+# Allow full indexing except hidden paths or local preview builds
+
+User-agent: *
+Allow: /
+
+# Disallow private/internal files
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_app/
+Disallow: /_astro/
+Disallow: /dist/
+Disallow: /node_modules/
+Disallow: /vite/
+
+Sitemap: https://projectcarey.dev/sitemap.xml
