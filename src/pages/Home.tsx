@@ -25,7 +25,7 @@ const FEATURED: Featured[] = [
         blurb:
             "On-chain lottery with secure ticketing, Switchboard VRF draws, event lifecycle automation, and vault-based payouts.",
         tags: ["Solana", "Anchor", "Switchboard VRF", "TypeScript UI"],
-        cta: { label: "Case repo", href: "https://github.com/projectcarey" },
+        cta: { label: "Case repo", href: "https://github.com/EZFoxone" },
     },
     {
         title: "Persona • Discord Game Layer",

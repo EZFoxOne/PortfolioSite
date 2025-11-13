@@ -68,7 +68,7 @@ export default function SiteHeader({
                         </a>
 
                         <a
-                            href="https://github.com/projectcarey"
+                            href="https://github.com/EZFoxone"
                             target="_blank"
                             rel="noreferrer"
                             className="text-sm text-gray-300 hover:text-white transition-colors inline-flex items-center gap-2"
@@ -118,7 +118,7 @@ export default function SiteHeader({
                                         Contact
                                     </a>
                                     <a
-                                        href="https://github.com/projectcarey"
+                                        href="https://github.com/EZFoxone"
                                         target="_blank"
                                         rel="noreferrer"
                                         className="inline-flex items-center gap-2 rounded-lg px-2 py-2 text-sm text-gray-300 hover:bg-gray-900/60 hover:text-white"
