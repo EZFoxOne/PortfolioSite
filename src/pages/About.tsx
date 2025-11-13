@@ -136,7 +136,7 @@ export default function About() {
                                 Contact Me
                             </a>
                             <a
-                                href="https://github.com/projectcarey"
+                                href="https://github.com/EZFoxone"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="btn glow inline-flex items-center gap-2"
