@@ -63,20 +63,26 @@ export default function About() {
             {/* ---------- PHOTO / VISUAL ---------- */}
             <section className="grid place-items-center">
                 <FadeIn delay={0.1}>
-                    <div className="relative w-48 h-48 rounded-full overflow-hidden border-2 border-emerald-400/40 shadow-glow">
-                        <img
-                            src="/cole_picture.jpg"
-                            alt="Cole Carey portrait"
-                            className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
-                            onError={(e) =>
-                                ((e.target as HTMLImageElement).src =
-                                    "https://placehold.co/300x300/0f172a/10b981?text=C")
-                            }
-                        />
+                    <div className="flex flex-col items-center">
+                        <div className="relative w-48 h-48 rounded-full overflow-hidden border-2 border-emerald-400/40 shadow-glow">
+                            <img
+                                src="/cole_picture.jpg"
+                                alt="Cole Carey portrait"
+                                className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+                                onError={(e) =>
+                                    ((e.target as HTMLImageElement).src =
+                                        "https://placehold.co/300x300/0f172a/10b981?text=C")
+                                }
+                            />
+                        </div>
+
+                        <p className="mt-3 text-sm text-gray-500">
+                            Always building — one project at a time.
+                        </p>
                     </div>
-                    <p className="mt-3 text-sm text-gray-500">Always building — one project at a time.</p>
                 </FadeIn>
             </section>
+
 
             {/* ---------- TIMELINE ---------- */}
             <section className="max-w-3xl mx-auto space-y-10">
