@@ -84,7 +84,7 @@ export default function Home() {
                                 View Projects
                             </Link>
                             <a
-                                href="mailto:cole@example.com"
+                                href="mailto:cole.carey@outlook.com"
                                 className="btn inline-flex items-center gap-2"
                             >
                                 <Mail className="size-4" />

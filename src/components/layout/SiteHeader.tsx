@@ -60,7 +60,7 @@ export default function SiteHeader({
                         <div className="mx-2 h-4 w-px bg-gray-800" />
 
                         <a
-                            href="mailto:cole@example.com"
+                            href="mailto:cole.carey@outlook.com"
                             className="text-sm text-gray-300 hover:text-white transition-colors inline-flex items-center gap-2"
                         >
                             <Mail className="size-4" />
@@ -111,7 +111,7 @@ export default function SiteHeader({
                                 ))}
                                 <li className="mt-2 flex items-center gap-3">
                                     <a
-                                        href="mailto:cole@example.com"
+                                        href="mailto:cole.carey@outlook.com"
                                         className="inline-flex items-center gap-2 rounded-lg px-2 py-2 text-sm text-gray-300 hover:bg-gray-900/60 hover:text-white"
                                     >
                                         <Mail className="size-4" />

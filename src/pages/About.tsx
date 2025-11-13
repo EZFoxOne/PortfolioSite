@@ -124,7 +124,7 @@ export default function About() {
 
                         <div className="flex justify-center gap-3">
                             <a
-                                href="mailto:cole@example.com"
+                                href="mailto:cole.carey@outlook.com"
                                 className="btn inline-flex items-center gap-2"
                             >
                                 Contact Me
