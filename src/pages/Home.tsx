@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { FEATURED_PROJECTS } from "@/data/projects";
 import { StackMap } from "@/components/StackMap";
+import { AboutDeveloper } from "@/components/AboutDeveloper";
 
 const SKILLS = [
     "TypeScript",
@@ -28,7 +29,6 @@ const SKILLS = [
 ];
 
 export default function Home() {
-    // Take the first few featured projects for the home page
     const featured = FEATURED_PROJECTS.slice(0, 3);
 
     return (
@@ -71,7 +71,6 @@ export default function Home() {
                     </div>
                 </FadeIn>
 
-                {/* subtle background accent */}
                 <div
                     aria-hidden
                     className="pointer-events-none absolute inset-x-0 -top-32 grid place-items-center opacity-30"
@@ -81,9 +80,9 @@ export default function Home() {
             </section>
 
             {/* ---------- QUICK STATS ---------- */}
-            <section className="grid gap-4 sm:grid-cols-3">
+            <section className="grid gap-4 sm:grid-cols-3 items-stretch">
                 <FadeIn>
-                    <div className="card p-5 flex items-center gap-4">
+                    <div className="card p-5 flex items-center gap-4 h-full">
                         <Zap className="size-5 text-primary" />
                         <div>
                             <p className="text-xs uppercase tracking-wide text-gray-500">
@@ -96,7 +95,7 @@ export default function Home() {
                     </div>
                 </FadeIn>
                 <FadeIn delay={0.05}>
-                    <div className="card p-5 flex items-center gap-4">
+                    <div className="card p-5 flex items-center gap-4 h-full">
                         <Wrench className="size-5 text-primary" />
                         <div>
                             <p className="text-xs uppercase tracking-wide text-gray-500">
@@ -109,7 +108,7 @@ export default function Home() {
                     </div>
                 </FadeIn>
                 <FadeIn delay={0.1}>
-                    <div className="card p-5 flex items-center gap-4">
+                    <div className="card p-5 flex items-center gap-4 h-full">
                         <Github className="size-5 text-primary" />
                         <div>
                             <p className="text-xs uppercase tracking-wide text-gray-500">
@@ -181,32 +180,23 @@ export default function Home() {
                 </ul>
             </section>
 
-            {/* ---------- SKILLS / TOOLING ---------- */}
+            {/* ---------- CORE STACK + PHILOSOPHY ---------- */}
             <section className="space-y-4">
                 <FadeIn>
                     <h2 className="text-2xl font-semibold text-white">Core Stack</h2>
                 </FadeIn>
-                <FadeIn delay={0.05}>
-                    <div className="grid gap-4 lg:grid-cols-[1.1fr,1fr] items-start">
-                        {/* Skills pill list */}
-                        <div className="card p-5">
-                            <ul className="flex flex-wrap gap-2">
-                                {SKILLS.map((s) => (
-                                    <li
-                                        key={s}
-                                        className="rounded-md border border-gray-800 bg-gray-900/50 px-3 py-1.5 text-xs text-gray-300"
-                                    >
-                                        {s}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
 
-                        {/* Stack map */}
-                        <StackMap />
+                <FadeIn delay={0.05}>
+                    <div className="space-y-4">
+                        {/* Stack + developer philosophy side by side, equal height */}
+                        <div className="grid gap-4 md:grid-cols-2 items-stretch">
+                            <StackMap className="h-full" />
+                            <AboutDeveloper className="h-full" />
+                        </div>
                     </div>
                 </FadeIn>
             </section>
+
 
             {/* ---------- CALL TO ACTION ---------- */}
             <section className="relative">
@@ -240,7 +230,6 @@ export default function Home() {
                     </div>
                 </FadeIn>
 
-                {/* sheen */}
                 <div
                     aria-hidden
                     className="pointer-events-none absolute -inset-x-6 -bottom-12 h-24 blur-3xl bg-emerald-500/20 opacity-30"
