@@ -10,6 +10,9 @@ type ProjectDetailModalProps = {
 export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps) {
     if (!project) return null;
 
+    const isPrivate = project.visibility === "Private";
+    const hasLink = Boolean(project.link);
+
     return (
         <div
             className="fixed inset-0 z-50 grid place-items-center bg-black/70 backdrop-blur-sm p-4"
@@ -19,7 +22,7 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                 className="relative w-full max-w-2xl rounded-2xl border border-gray-800 bg-surface shadow-glow p-6"
                 onClick={(e) => e.stopPropagation()}
             >
-                {/* Close button sits in its own reserved corner */}
+                {/* Close button */}
                 <button
                     onClick={onClose}
                     className="absolute top-3 right-3 rounded-md p-2 text-gray-400 hover:bg-gray-900/60 hover:text-white"
@@ -28,7 +31,7 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                     <X className="size-5" />
                 </button>
 
-                {/* Header: note the pr-10 so content doesn't sit under the X */}
+                {/* Header */}
                 <div className="flex items-start justify-between gap-3 pr-10">
                     <div>
                         <h3 className="text-xl font-semibold text-white">
@@ -42,19 +45,21 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                     </div>
                     <span
                         className={`rounded-full border px-2.5 py-0.5 text-[10px] uppercase tracking-wide ${
-                            project.visibility === "Public"
-                                ? "border-emerald-400/40 bg-emerald-500/10 text-emerald-300"
-                                : "border-gray-700 bg-gray-900 text-gray-400"
+                            isPrivate
+                                ? "border-gray-700 bg-gray-900 text-gray-400"
+                                : "border-emerald-400/40 bg-emerald-500/10 text-emerald-300"
                         }`}
                     >
                         {project.visibility}
                     </span>
                 </div>
 
+                {/* Description */}
                 <p className="mt-3 text-sm text-gray-400">
                     {project.details ?? project.summary}
                 </p>
 
+                {/* Tags */}
                 <div className="mt-4 flex flex-wrap gap-2">
                     {project.tags.map((t) => (
                         <span
@@ -66,7 +71,8 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                     ))}
                 </div>
 
-                {project.link && (
+                {/* Link for public projects */}
+                {hasLink && (
                     <a
                         href={project.link}
                         target="_blank"
@@ -77,10 +83,12 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                     </a>
                 )}
 
-                {project.visibility === "Private" && !project.link && (
+                {/* Private / client-facing note */}
+                {isPrivate && !hasLink && (
                     <p className="mt-3 text-xs text-gray-500">
-                        This is a private or client-facing build. I’m happy to walk
-                        through the architecture and decisions on request.
+                        This one lives in a private environment, not on GitHub.
+                        I’m happy to walk through the architecture, decisions, and
+                        tradeoffs if you’re curious.
                     </p>
                 )}
             </div>
