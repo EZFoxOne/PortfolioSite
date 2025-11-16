@@ -40,7 +40,7 @@ export default function SiteLayout({
                     className={`mx-auto w-full px-4 py-6 text-sm text-gray-400 max-w-${maxWidth}`}
                 >
                     <p>
-                        © {new Date().getFullYear()} {brand}. Built with Tailwind v4 + Vite.
+                        © {new Date().getFullYear()} {brand}. Built with React, TypeScript, and too many late-night commits.
                     </p>
                 </div>
             </footer>

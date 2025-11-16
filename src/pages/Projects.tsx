@@ -23,9 +23,9 @@ export default function Projects() {
                 <header className="text-center space-y-2">
                     <h1 className="text-3xl font-bold text-white">Projects</h1>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        A selection of real shipped work across web, crypto, bots, and
-                        tooling. Some codebases are public, others are private or
-                        client-facing — all of them exist and are in use.
+                        A curated set of the things I’ve actually shipped — web apps, bots,
+                        Solana tools, internal systems. Some repos are public, some live behind
+                        client walls, but every project here is real and battle-tested.
                     </p>
                 </header>
             </FadeIn>

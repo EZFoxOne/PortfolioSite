@@ -47,9 +47,9 @@ export default function Home() {
                         </h1>
 
                         <p className="mx-auto max-w-2xl text-gray-400">
-                            I design and ship web apps, on-chain tools, and playful systems.
-                            The goal is simple: clean architecture, crisp UX, and throughput that
-                            makes your idea feel inevitable.
+                            I build things that run fast, feel good, and don’t fall over under
+                            pressure. Web apps, bots, Solana systems — if it needs structure and
+                            a little spark, I’m probably already working on it.
                         </p>
 
                         <div className="flex flex-wrap justify-center gap-3 pt-1">
@@ -103,7 +103,7 @@ export default function Home() {
                                 Build Style
                             </p>
                             <p className="text-sm text-gray-200">
-                                Clean architecture, fast iteration
+                                Minimal surface area, maximum throughput
                             </p>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ export default function Home() {
                                 Open Source
                             </p>
                             <p className="text-sm text-gray-200">
-                                Select repos & experiments
+                                A handful of projects that escaped into the wild
                             </p>
                         </div>
                     </div>
@@ -132,9 +132,9 @@ export default function Home() {
                                 Featured Work
                             </h2>
                             <p className="text-sm text-gray-400">
-                                A few representative builds: this site, Solana tools, and
-                                production apps. Some are public, others are client or
-                                ops-facing, but all are real projects.
+                                A glimpse at some of the things I’ve shipped — public tools,
+                                private systems, and the occasional experiment that spiraled
+                                into a full project.
                             </p>
                         </div>
                         <Link
@@ -216,14 +216,14 @@ export default function Home() {
                             Have a project or idea worth shipping?
                         </h3>
                         <p className="max-w-2xl text-gray-400">
-                            I take on select collaborations where speed, clarity, and outcomes
-                            matter. If you need a modern web app, a crypto-native tool, or a
-                            clean systems design, let’s talk.
+                            I take on a small number of collaborations where shipping matters
+                            more than hand-waving. If you need a clean system, a fast UI, or a
+                            Solana tool that won’t melt under load, let’s talk.
                         </p>
 
                         <div className="flex flex-wrap justify-center gap-3">
                             <a
-                                href="mailto:cole@example.com"
+                                href="mailto:cole.carey@outlook.com"
                                 className="btn inline-flex items-center gap-2"
                             >
                                 <Mail className="size-4" />

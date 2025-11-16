@@ -6,28 +6,28 @@ const TIMELINE = [
         year: "2025",
         title: "Independent Builder",
         description:
-            "Working full-time on open-source projects, blockchain tools, and automation systems. Currently developing Persona, a cross-server Discord game layer, and experimental Solana integrations.",
+            "Working full-time on open-source tools, blockchain systems, and automation that saves humans from themselves. Currently focused on Persona — a cross-server Discord game layer — plus a rotating cast of Solana experiments.",
         icon: <Rocket className="size-4 text-primary" />,
     },
     {
         year: "2023–2024",
         title: "Full-Stack Developer & System Designer",
         description:
-            "Built a range of production systems — from Solana lottery smart contracts with Anchor + VRF to real-time web applications and analytics dashboards. Established modular patterns for multi-server Discord bots.",
+            "Shipped everything from on-chain lottery programs with Anchor + VRF to real-time dashboards and multi-server Discord systems. Learned to design architectures that survive actual usage, not just demos.",
         icon: <Code className="size-4 text-primary" />,
     },
     {
         year: "2021–2022",
         title: "Transition from Field Engineering",
         description:
-            "Shifted from mechanical systems and process engineering to software development, combining practical problem-solving with system design thinking.",
+            "Moved from mechanical systems to software systems. Turns out the mindset is the same — diagnose the failure, design the fix, make it reliable. Just fewer steel-toe boots.",
         icon: <Hammer className="size-4 text-primary" />,
     },
     {
         year: "Earlier",
         title: "Builder by Instinct",
         description:
-            "Started with hardware, scripting, and automation before moving into full-stack web development. Always chasing efficiency, clarity, and a bit of fun in every project.",
+            "Started with hardware hacks and scrappy scripting. Fell into full-stack development the moment I realized I could automate basically anything.",
         icon: <Sprout className="size-4 text-primary" />,
     },
 ];
@@ -40,22 +40,22 @@ export default function About() {
                 <FadeIn>
                     <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-500/5 px-3 py-1 text-xs text-emerald-300">
                         <Star className="size-3.5" />
-                        About Cole Carey
+                        About the guy who won’t stop building things
                     </div>
                 </FadeIn>
 
                 <FadeIn delay={0.05}>
                     <h1 className="text-4xl font-bold tracking-tight text-white">
-                        Software engineer, problem-solver, and systems thinker.
+                        Software engineer. Systems thinker. Perpetual tinkerer.
                     </h1>
                 </FadeIn>
 
                 <FadeIn delay={0.1}>
                     <p className="mx-auto max-w-3xl text-gray-400 leading-relaxed">
-                        I build tools that make digital systems behave better — faster, more reliable,
-                        and more transparent. Whether I’m writing code for an on-chain lottery,
-                        architecting a Discord economy, or refining UI performance, the goal’s the
-                        same: turn good ideas into working reality.
+                        I build things that make other things behave. Sometimes that means an
+                        on-chain lottery, sometimes a Discord economy, sometimes a UI that
+                        finally stops stuttering. The mission stays the same: take an idea,
+                        wrestle with it until it works, and leave it cleaner than I found it.
                     </p>
                 </FadeIn>
             </section>
@@ -77,12 +77,11 @@ export default function About() {
                         </div>
 
                         <p className="mt-3 text-sm text-gray-500">
-                            Always building — one project at a time.
+                            Built with React, TypeScript, and too many late-night commits.
                         </p>
                     </div>
                 </FadeIn>
             </section>
-
 
             {/* ---------- TIMELINE ---------- */}
             <section className="max-w-3xl mx-auto space-y-10">
@@ -102,7 +101,9 @@ export default function About() {
                                 <div className="space-y-1">
                                     <h3 className="text-sm font-semibold text-white flex items-center gap-2">
                                         {item.year}
-                                        <span className="text-gray-500 font-normal">{item.title}</span>
+                                        <span className="text-gray-500 font-normal">
+                                            {item.title}
+                                        </span>
                                     </h3>
                                     <p className="text-sm text-gray-400 leading-relaxed">
                                         {item.description}
@@ -122,10 +123,9 @@ export default function About() {
                             What’s next?
                         </h3>
                         <p className="text-gray-400 leading-relaxed">
-                            I’m focused on continuing to build high-performance applications
-                            and on-chain systems that reward creativity and efficiency.
-                            Open to collaboration, consulting, or just swapping ideas with
-                            other builders.
+                            I’m continuing to build high-performance systems — on-chain,
+                            off-chain, and everything in between. If you want to collaborate,
+                            want something built, or just want to talk shop, I’m always down.
                         </p>
 
                         <div className="flex justify-center gap-3">
