@@ -1,3 +1,4 @@
+// src/components/projects/ProjectCard.tsx
 import FadeIn from "@/components/motion/FadeIn";
 
 export type Project = {
@@ -8,6 +9,7 @@ export type Project = {
     tech?: string;
     link?: string;
     details?: string;
+    slug: string;
 };
 
 type ProjectCardProps = {
@@ -21,7 +23,7 @@ export function ProjectCard({ project, index = 0, onClick }: ProjectCardProps) {
         <FadeIn delay={index * 0.05}>
             <li
                 onClick={onClick}
-                className="card p-5 cursor-pointer hover-lift hover-glow-soft"
+                className="card h-full p-5 flex flex-col cursor-pointer hover-lift hover-glow-soft"
             >
                 <div className="flex items-start justify-between gap-2">
                     <h2 className="text-lg font-semibold text-white">
@@ -37,7 +39,11 @@ export function ProjectCard({ project, index = 0, onClick }: ProjectCardProps) {
                         {project.visibility}
                     </span>
                 </div>
-                <p className="mt-2 text-sm text-gray-400">{project.summary}</p>
+
+                <p className="mt-2 text-sm text-gray-400">
+                    {project.summary}
+                </p>
+
                 <div className="mt-3 flex flex-wrap gap-2">
                     {project.tags.map((t) => (
                         <span
