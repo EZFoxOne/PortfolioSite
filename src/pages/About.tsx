@@ -118,7 +118,7 @@ export default function About() {
             {/* ---------- CLOSING CTA ---------- */}
             <section className="relative text-center">
                 <FadeIn>
-                    <div className="card p-8 md:p-10 mx-auto max-w-2xl space-y-4">
+                    <div className="card p-8 md:p-10 mx-auto max-w-2xl space-y-4 hover-lift hover-glow-soft">
                         <h3 className="text-xl font-semibold text-white">
                             What’s next?
                         </h3>

@@ -60,7 +60,7 @@ export default function Projects() {
             </FadeIn>
 
             {/* Project Grid */}
-            <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
                 {visible.map((project, i) => (
                     <ProjectCard
                         key={project.slug}

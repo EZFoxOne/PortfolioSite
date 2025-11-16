@@ -21,7 +21,7 @@ export function ProjectCard({ project, index = 0, onClick }: ProjectCardProps) {
         <FadeIn delay={index * 0.05}>
             <li
                 onClick={onClick}
-                className="card p-5 cursor-pointer transition-transform hover:scale-[1.02] hover:border-emerald-400/30"
+                className="card p-5 cursor-pointer hover-lift hover-glow-soft"
             >
                 <div className="flex items-start justify-between gap-2">
                     <h2 className="text-lg font-semibold text-white">
@@ -42,7 +42,7 @@ export function ProjectCard({ project, index = 0, onClick }: ProjectCardProps) {
                     {project.tags.map((t) => (
                         <span
                             key={t}
-                            className="rounded-md border border-emerald-400/20 bg-emerald-500/5 px-2 py-1 text-xs text-emerald-300"
+                            className="rounded-md border border-emerald-400/20 bg-emerald-500/5 px-2 py-1 text-xs text-emerald-300 pill-hover"
                         >
                             {t}
                         </span>

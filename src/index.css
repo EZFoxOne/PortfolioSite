@@ -1,11 +1,17 @@
 @import "tailwindcss";
 
 @layer base {
-    html, body {
+    html,
+    body {
         @apply h-full bg-neutral-950 text-gray-100 antialiased;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         @apply font-semibold text-white;
     }
 
@@ -21,12 +27,107 @@
 
     .btn {
         @apply rounded-lg bg-emerald-500/10 border border-emerald-400/40 text-emerald-300 px-3 py-2 text-sm font-medium
-        hover:bg-emerald-500/20 hover:text-white transition-colors;
+        hover:bg-emerald-500/20 hover:text-white;
+        /* smoother interaction */
+        transition:
+                background-color 150ms ease-out,
+                color 150ms ease-out,
+                border-color 150ms ease-out,
+                box-shadow 150ms ease-out,
+                transform 120ms ease-out;
     }
 }
 
 @layer utilities {
     .glow {
         @apply shadow-[0_0_10px_1px_rgba(16,185,129,0.5)];
+    }
+
+    /* ---------- Card & container motion ---------- */
+
+    .hover-lift {
+        transition: transform 150ms ease-out;
+    }
+
+    .hover-lift:hover {
+        transform: translateY(-2px);
+    }
+
+    .hover-glow-soft {
+        transition:
+                box-shadow 150ms ease-out,
+                border-color 150ms ease-out,
+                background-color 150ms ease-out,
+                transform 150ms ease-out;
+    }
+
+    .hover-glow-soft:hover {
+        box-shadow:
+                0 0 0 1px rgba(16, 185, 129, 0.35),
+                0 0 22px rgba(16, 185, 129, 0.2);
+    }
+
+    /* ---------- Tag / pill micro-hover ---------- */
+
+    .pill-hover {
+        transition:
+                transform 100ms ease-out,
+                border-color 100ms ease-out,
+                background-color 100ms ease-out,
+                color 100ms ease-out;
+    }
+
+    .pill-hover:hover {
+        transform: translateY(-1px) scale(1.03);
+        border-color: rgba(52, 211, 153, 0.6);
+        background-color: rgba(16, 185, 129, 0.12);
+        color: #a7f3d0;
+    }
+
+    /* ---------- Link underline sweep ---------- */
+
+    .link-underline {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        overflow: hidden;
+    }
+
+    .link-underline::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.06rem;
+        width: 0;
+        height: 1px;
+        background: linear-gradient(
+                to right,
+                rgba(16, 185, 129, 0.2),
+                rgba(52, 211, 153, 0.8)
+        );
+        transition: width 160ms ease-out;
+    }
+
+    .link-underline:hover::after {
+        width: 100%;
+    }
+
+    /* ---------- Breathing background glow ---------- */
+
+    @keyframes breathe-glow {
+        0%,
+        100% {
+            opacity: 0.2;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 0.4;
+            transform: scale(1.04);
+        }
+    }
+
+    .bg-breathe {
+        animation: breathe-glow 12s ease-in-out infinite;
     }
 }

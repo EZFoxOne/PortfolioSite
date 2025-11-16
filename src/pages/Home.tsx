@@ -7,7 +7,6 @@ import {
     Mail,
     Rocket,
     Sparkles,
-    WalletMinimal,
     Wrench,
     Zap,
 } from "lucide-react";
@@ -75,14 +74,14 @@ export default function Home() {
                     aria-hidden
                     className="pointer-events-none absolute inset-x-0 -top-32 grid place-items-center opacity-30"
                 >
-                    <div className="h-64 w-64 rounded-full blur-3xl bg-emerald-500/20" />
+                    <div className="h-64 w-64 rounded-full blur-3xl bg-emerald-500/20 bg-breathe" />
                 </div>
             </section>
 
             {/* ---------- QUICK STATS ---------- */}
             <section className="grid gap-4 sm:grid-cols-3 items-stretch">
                 <FadeIn>
-                    <div className="card p-5 flex items-center gap-4 h-full">
+                    <div className="card p-5 flex items-center gap-4 h-full hover-lift hover-glow-soft">
                         <Zap className="size-5 text-primary" />
                         <div>
                             <p className="text-xs uppercase tracking-wide text-gray-500">
@@ -95,7 +94,7 @@ export default function Home() {
                     </div>
                 </FadeIn>
                 <FadeIn delay={0.05}>
-                    <div className="card p-5 flex items-center gap-4 h-full">
+                    <div className="card p-5 flex items-center gap-4 h-full hover-lift hover-glow-soft">
                         <Wrench className="size-5 text-primary" />
                         <div>
                             <p className="text-xs uppercase tracking-wide text-gray-500">
@@ -108,7 +107,7 @@ export default function Home() {
                     </div>
                 </FadeIn>
                 <FadeIn delay={0.1}>
-                    <div className="card p-5 flex items-center gap-4 h-full">
+                    <div className="card p-5 flex items-center gap-4 h-full hover-lift hover-glow-soft">
                         <Github className="size-5 text-primary" />
                         <div>
                             <p className="text-xs uppercase tracking-wide text-gray-500">
@@ -138,17 +137,17 @@ export default function Home() {
                         </div>
                         <Link
                             to="/projects"
-                            className="text-sm text-emerald-300 hover:text-white inline-flex items-center gap-1"
+                            className="text-sm text-emerald-300 hover:text-white link-underline"
                         >
                             See all <ArrowRight className="size-4" />
                         </Link>
                     </header>
                 </FadeIn>
 
-                <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
                     {featured.map((project, i) => (
                         <FadeIn key={project.slug} delay={i * 0.06}>
-                            <li className="card h-full p-5 flex flex-col">
+                            <li className="card h-full p-5 flex flex-col hover-lift hover-glow-soft">
                                 <h3 className="text-lg font-semibold text-white">
                                     {project.title}
                                 </h3>
@@ -159,7 +158,7 @@ export default function Home() {
                                     {project.tags.map((t) => (
                                         <span
                                             key={t}
-                                            className="rounded-md border border-emerald-400/20 bg-emerald-500/5 px-2 py-1 text-xs text-emerald-300"
+                                            className="rounded-md border border-emerald-400/20 bg-emerald-500/5 px-2 py-1 text-xs text-emerald-300 pill-hover"
                                         >
                                             {t}
                                         </span>
@@ -169,7 +168,7 @@ export default function Home() {
                                 <div className="mt-4 pt-2">
                                     <Link
                                         to="/projects"
-                                        className="btn glow inline-flex items-center gap-2"
+                                        className="btn glow inline-flex items-center gap-2 link-underline"
                                     >
                                         See details <ArrowRight className="size-4" />
                                     </Link>
@@ -188,20 +187,18 @@ export default function Home() {
 
                 <FadeIn delay={0.05}>
                     <div className="space-y-4">
-                        {/* Stack + developer philosophy side by side, equal height */}
                         <div className="grid gap-4 md:grid-cols-2 items-stretch">
-                            <StackMap className="h-full" />
-                            <AboutDeveloper className="h-full" />
+                            <StackMap className="h-full hover-lift hover-glow-soft" />
+                            <AboutDeveloper className="h-full hover-lift hover-glow-soft" />
                         </div>
                     </div>
                 </FadeIn>
             </section>
 
-
             {/* ---------- CALL TO ACTION ---------- */}
             <section className="relative">
                 <FadeIn>
-                    <div className="card p-6 md:p-8 flex flex-col items-center text-center gap-4">
+                    <div className="card p-6 md:p-8 flex flex-col items-center text-center gap-4 hover-lift hover-glow-soft">
                         <h3 className="text-xl font-semibold text-white">
                             Have a project or idea worth shipping?
                         </h3>

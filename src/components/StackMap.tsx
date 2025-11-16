@@ -61,7 +61,7 @@ export function StackMap({ className }: StackMapProps) {
                             {section.items.map((item) => (
                                 <span
                                     key={item}
-                                    className="rounded-md border border-gray-700 bg-gray-950/80 px-2.5 py-1 text-[11px] text-gray-200"
+                                    className="rounded-md border border-gray-700 bg-gray-950/80 px-2.5 py-1 text-[11px] text-gray-200 pill-hover"
                                 >
                                     {item}
                                 </span>
