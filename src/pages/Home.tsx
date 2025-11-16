@@ -66,14 +66,6 @@ export default function Home() {
                                 <Mail className="size-4" />
                                 Contact
                             </a>
-                            {/* Hint: Donate opens header modal; keep a direct link as backup */}
-                            <a
-                                href="solana:YOUR_SOLANA_ADDRESS_HERE"
-                                className="btn inline-flex items-center gap-2"
-                            >
-                                <WalletMinimal className="size-4" />
-                                Donate
-                            </a>
                         </div>
                     </div>
                 </FadeIn>
