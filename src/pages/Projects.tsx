@@ -5,6 +5,7 @@ import { Filter } from "lucide-react";
 import { PROJECTS, type Project } from "@/data/projects";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { ProjectDetailModal } from "@/components/projects/ProjectDetailModal";
+import { CurrentlyWorkingOn } from "@/components/CurrentlyWorkingOn";
 
 export default function Projects() {
     const [filter, setFilter] = useState<string | null>(null);
@@ -17,7 +18,7 @@ export default function Projects() {
         : PROJECTS;
 
     return (
-        <section className="space-y-10">
+        <section className="space-y-12">
             {/* Header */}
             <FadeIn>
                 <header className="text-center space-y-2">
@@ -30,8 +31,15 @@ export default function Projects() {
                 </header>
             </FadeIn>
 
-            {/* Filters */}
+            {/* CURRENTLY WORKING ON */}
             <FadeIn delay={0.05}>
+                <div className="max-w-3xl mx-auto">
+                    <CurrentlyWorkingOn />
+                </div>
+            </FadeIn>
+
+            {/* Filters */}
+            <FadeIn delay={0.1}>
                 <div className="flex flex-wrap justify-center gap-2">
                     <button
                         onClick={() => setFilter(null)}
@@ -60,16 +68,18 @@ export default function Projects() {
             </FadeIn>
 
             {/* Project Grid */}
-            <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
-                {visible.map((project, i) => (
-                    <ProjectCard
-                        key={project.slug}
-                        project={project}
-                        index={i}
-                        onClick={() => setSelected(project)}
-                    />
-                ))}
-            </ul>
+            <FadeIn delay={0.15}>
+                <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
+                    {visible.map((project, i) => (
+                        <ProjectCard
+                            key={project.slug}
+                            project={project}
+                            index={i}
+                            onClick={() => setSelected(project)}
+                        />
+                    ))}
+                </ul>
+            </FadeIn>
 
             {/* Details Modal */}
             <ProjectDetailModal
