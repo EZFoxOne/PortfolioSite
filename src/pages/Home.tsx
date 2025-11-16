@@ -12,6 +12,7 @@ import {
     Zap,
 } from "lucide-react";
 import { FEATURED_PROJECTS } from "@/data/projects";
+import { StackMap } from "@/components/StackMap";
 
 const SKILLS = [
     "TypeScript",
@@ -186,17 +187,23 @@ export default function Home() {
                     <h2 className="text-2xl font-semibold text-white">Core Stack</h2>
                 </FadeIn>
                 <FadeIn delay={0.05}>
-                    <div className="card p-5">
-                        <ul className="flex flex-wrap gap-2">
-                            {SKILLS.map((s) => (
-                                <li
-                                    key={s}
-                                    className="rounded-md border border-gray-800 bg-gray-900/50 px-3 py-1.5 text-xs text-gray-300"
-                                >
-                                    {s}
-                                </li>
-                            ))}
-                        </ul>
+                    <div className="grid gap-4 lg:grid-cols-[1.1fr,1fr] items-start">
+                        {/* Skills pill list */}
+                        <div className="card p-5">
+                            <ul className="flex flex-wrap gap-2">
+                                {SKILLS.map((s) => (
+                                    <li
+                                        key={s}
+                                        className="rounded-md border border-gray-800 bg-gray-900/50 px-3 py-1.5 text-xs text-gray-300"
+                                    >
+                                        {s}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Stack map */}
+                        <StackMap />
                     </div>
                 </FadeIn>
             </section>
