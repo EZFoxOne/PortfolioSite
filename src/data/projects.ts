@@ -25,7 +25,7 @@ export const PROJECTS: Project[] = [
         details:
             "This site is designed as a portfolio that can evolve with new projects and experiments. It focuses on fast load times, clean layout, and reusable components that make it easy to highlight real work without hand-waving.",
         featured: true,
-        // link: "https://github.com/...", // add when you're ready
+        link: "https://github.com/EZFoxOne/PortfolioSite",
     },
     {
         title: "eReader Editor",
@@ -50,6 +50,7 @@ export const PROJECTS: Project[] = [
         details:
             "The site walks new users through what the token is, how it works, shows live pricing, and provides a clear path to buy. Fast, mobile-first, and easy to retheme for future tokens.",
         featured: false,
+        link: "https://github.com/EZFoxOne/ptsd",
     },
     {
         title: "Jupiter Lend Liquidator",
@@ -86,7 +87,7 @@ export const PROJECTS: Project[] = [
         details:
             "Provides a small, focused API for opening databases, managing object stores, and performing typical CRUD operations without constantly wrestling with IndexedDB’s low-level API.",
         featured: false,
-        // link: "https://github.com/...", // when public
+        link: "https://github.com/EZFoxOne/IndexedDB-Manager",
     },
     {
         title: "Meteora DLMM Calculator",
@@ -99,6 +100,7 @@ export const PROJECTS: Project[] = [
         details:
             "Queries Meteora DLMM pools, computes basic metrics, and lets you scan and sort for potentially attractive pools with minimal visual noise.",
         featured: false,
+        link: "https://github.com/EZFoxOne/MeteoraDLMMCalculator",
     },
     {
         title: "Disco Chat",
