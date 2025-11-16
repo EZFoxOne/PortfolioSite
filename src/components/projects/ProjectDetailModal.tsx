@@ -1,5 +1,6 @@
+// src/components/projects/ProjectDetailModal.tsx
 import { ArrowUpRight, X } from "lucide-react";
-import type { Project } from "./ProjectCard";
+import type { Project } from "@/data/projects";
 
 type ProjectDetailModalProps = {
     project: Project | null;
@@ -18,6 +19,7 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                 className="relative w-full max-w-2xl rounded-2xl border border-gray-800 bg-surface shadow-glow p-6"
                 onClick={(e) => e.stopPropagation()}
             >
+                {/* Close button sits in its own reserved corner */}
                 <button
                     onClick={onClose}
                     className="absolute top-3 right-3 rounded-md p-2 text-gray-400 hover:bg-gray-900/60 hover:text-white"
@@ -26,7 +28,8 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                     <X className="size-5" />
                 </button>
 
-                <div className="flex items-start justify-between gap-3">
+                {/* Header: note the pr-10 so content doesn't sit under the X */}
+                <div className="flex items-start justify-between gap-3 pr-10">
                     <div>
                         <h3 className="text-xl font-semibold text-white">
                             {project.title}
