@@ -13,6 +13,7 @@ import SiteLayout from "@/components/layout/SiteLayout";
 const Home = lazy(() => import("@/pages/Home"));
 const Projects = lazy(() => import("@/pages/Projects"));
 const About = lazy(() => import("@/pages/About"));
+const Privacy = lazy(() => import("@/pages/Privacy"));
 
 // ---- Suspense fallback shown during lazy chunk load ----
 function Fallback() {
@@ -113,6 +114,21 @@ const router = createBrowserRouter([
                     description="Background, interests, and the way I approach engineering."
                 >
                     <About />
+                </Page>
+                <ScrollRestoration />
+                <HashScroller />
+            </SiteLayout>
+        ),
+    },
+    {
+        path: "/privacy",
+        element: (
+            <SiteLayout donateAddress="BUFJUViLHwEPigY7jeZyTkjQxcVU9xUkmCqQfXB9XKFk" brand="Cole Carey">
+                <Page
+                    title="Privacy Policy"
+                    description="Privacy policy for Cole Carey's portfolio website and applications, including Android apps."
+                >
+                    <Privacy />
                 </Page>
                 <ScrollRestoration />
                 <HashScroller />

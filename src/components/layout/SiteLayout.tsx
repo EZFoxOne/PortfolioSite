@@ -1,4 +1,5 @@
 import { type PropsWithChildren } from "react";
+import { Link } from "react-router-dom";
 import SiteHeader from "./SiteHeader";
 import SeoDefaults from "@/components/seo/SeoDefaults";
 
@@ -39,9 +40,17 @@ export default function SiteLayout({
                 <div
                     className={`mx-auto w-full px-4 py-6 text-sm text-gray-400 max-w-${maxWidth}`}
                 >
-                    <p>
-                        © {new Date().getFullYear()} {brand}. Built with React, TypeScript, and too many late-night commits.
-                    </p>
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
+                        <p>
+                            © {new Date().getFullYear()} {brand}. Built with React, TypeScript, and too many late-night commits.
+                        </p>
+                        <Link
+                            to="/privacy"
+                            className="text-gray-400 hover:text-emerald-300 transition-colors underline"
+                        >
+                            Privacy Policy
+                        </Link>
+                    </div>
                 </div>
             </footer>
         </div>
