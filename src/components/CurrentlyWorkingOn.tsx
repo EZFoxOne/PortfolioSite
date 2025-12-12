@@ -8,9 +8,9 @@ type CurrentlyWorkingOnProps = {
 
 const ITEMS = [
     {
-        label: "DJ Karaoke System (client-facing)",
+        label: "Client Management and Billing interface",
         description:
-            "A full featured DJ & patron interface: mobile-first song requests, fuzzy search, live request queue, and a DJ control panel for managing events, singers, and flow.",
+            "A comprehensive system for managing client relationships, tracking projects, and handling billing workflows with clean data organization and efficient workflows.",
     },
     {
         label: "This portfolio",
@@ -60,7 +60,7 @@ export function CurrentlyWorkingOn({ className }: CurrentlyWorkingOnProps) {
                         <div>
                             <p className="font-medium text-gray-100 flex items-center gap-2">
                                 {item.label}
-                                {item.label.includes("DJ Karaoke") && (
+                                {item.label.includes("Client Management") && (
                                     <span className="inline-flex items-center gap-1 rounded-full border border-emerald-400/40 bg-emerald-500/10 px-2 py-0.5 text-[10px] uppercase tracking-wide text-emerald-300">
                                         <Sparkles className="size-3" />
                                         Primary Focus

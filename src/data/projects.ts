@@ -138,6 +138,18 @@ export const PROJECTS: Project[] = [
             "Provides numeric challenges, captcha-like flows, and configurable verification steps before assigning roles. Built to reduce spam and raids without wrecking the UX for real users.",
         featured: false,
     },
+    {
+        title: "DJ Karaoke System",
+        slug: "dj-karaoke-system",
+        summary:
+            "A full featured DJ & patron interface: mobile-first song requests, fuzzy search, live request queue, and a DJ control panel for managing events, singers, and flow.",
+        tags: ["React", "TypeScript", "Mobile-First", "Real-time", "Frontend"],
+        visibility: "Private",
+        tech: "React + TypeScript",
+        details:
+            "A comprehensive karaoke management system with dual interfaces: a mobile-first patron app for song requests with fuzzy search capabilities, and a DJ control panel for managing events, singers, and request queues in real-time. Built to handle live events with smooth flow and minimal friction.",
+        featured: true,
+    },
 ];
 
 export const FEATURED_PROJECTS: Project[] = PROJECTS.filter(
