@@ -6,14 +6,14 @@ const TIMELINE = [
         year: "2025",
         title: "Independent Builder",
         description:
-            "Working full-time on open-source tools, blockchain systems, and automation that saves humans from themselves. Currently focused on Persona — a cross-server Discord game layer — plus a rotating cast of Solana experiments.",
+            "Shipped the DJ Karaoke System — a full-featured mobile-first interface for song requests and DJ control. Working on client management and billing interfaces, plus a rotating cast of web apps and Solana DeFi tools.",
         icon: <Rocket className="size-4 text-primary" />,
     },
     {
         year: "2023–2024",
         title: "Full-Stack Developer & System Designer",
         description:
-            "Shipped everything from on-chain lottery programs with Anchor + VRF to real-time dashboards and multi-server Discord systems. Learned to design architectures that survive actual usage, not just demos.",
+            "Shipped everything from Solana DeFi liquidators and token management systems to multi-server Discord bots and educational tools. Learned to design architectures that survive actual usage, not just demos.",
         icon: <Code className="size-4 text-primary" />,
     },
     {
@@ -52,9 +52,9 @@ export default function About() {
 
                 <FadeIn delay={0.1}>
                     <p className="mx-auto max-w-3xl text-gray-400 leading-relaxed">
-                        I build things that make other things behave. Sometimes that means an
-                        on-chain lottery, sometimes a Discord economy, sometimes a UI that
-                        finally stops stuttering. The mission stays the same: take an idea,
+                        I build things that make other things behave. Sometimes that means a
+                        Solana DeFi tool, sometimes a Discord bot, sometimes a client-facing
+                        interface that finally stops stuttering. The mission stays the same: take an idea,
                         wrestle with it until it works, and leave it cleaner than I found it.
                     </p>
                 </FadeIn>
